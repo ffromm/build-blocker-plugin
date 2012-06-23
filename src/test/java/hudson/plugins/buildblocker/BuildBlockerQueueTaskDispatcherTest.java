@@ -79,6 +79,9 @@ public class BuildBlockerQueueTaskDispatcherTest extends HudsonTestCase {
 
         BuildBlockerProperty property = new BuildBlockerProperty();
 
+        property.setUseBuildBlocker(true);
+        assertTrue(property.isUseBuildBlocker());
+
         property.setBlockingJobs(".*ocki.*");
 
         project.addProperty(property);
