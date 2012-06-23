@@ -1,0 +1,7 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+    <f:optionalBlock name="useBuildBlocker" title="${%Block build if certain jobs are running}" checked="${instance.useBuildBlocker}">
+        <f:entry title="${%Blocking jobs}" field="blockingJobs">
+            <f:textarea />
+        </f:entry>
+    </f:optionalBlock>
+</j:jelly>
