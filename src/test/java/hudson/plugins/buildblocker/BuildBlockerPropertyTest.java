@@ -24,6 +24,7 @@
 
 package hudson.plugins.buildblocker;
 
+import hudson.model.Job;
 import net.sf.json.JSONObject;
 import org.easymock.EasyMock;
 import org.jvnet.hudson.test.HudsonTestCase;
@@ -57,6 +58,16 @@ public class BuildBlockerPropertyTest extends HudsonTestCase {
 
         property.setBlockingJobs("blockingJobs");
         assertEquals("blockingJobs", property.getBlockingJobs());
+    }
+
+    /**
+     * Simple property test
+     * @throws Exception
+     */
+    public void testIsApplicable() throws Exception {
+        BuildBlockerProperty property = new BuildBlockerProperty();
+
+        assertTrue(property.getDescriptor().isApplicable(Job.class));
     }
 
     /**
