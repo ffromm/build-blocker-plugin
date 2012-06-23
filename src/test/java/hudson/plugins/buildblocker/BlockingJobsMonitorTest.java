@@ -30,7 +30,6 @@ import hudson.model.labels.LabelAtom;
 import hudson.slaves.DumbSlave;
 import hudson.slaves.SlaveComputer;
 import hudson.tasks.Shell;
-import org.junit.Test;
 import org.jvnet.hudson.test.HudsonTestCase;
 
 import java.util.concurrent.Future;
@@ -44,7 +43,6 @@ public class BlockingJobsMonitorTest extends HudsonTestCase {
      * One test for all for faster execution
      * @throws Exception
      */
-    @Test
     public void testConstructor() throws Exception {
         // init slave
         LabelAtom label = new LabelAtom("label");

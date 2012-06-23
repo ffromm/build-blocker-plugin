@@ -26,7 +26,6 @@ package hudson.plugins.buildblocker;
 
 import hudson.Extension;
 import hudson.model.AbstractProject;
-import hudson.model.Node;
 import hudson.model.Queue;
 import hudson.model.queue.CauseOfBlockage;
 import hudson.model.queue.QueueTaskDispatcher;
@@ -73,6 +72,7 @@ public class BuildBlockerQueueTaskDispatcher extends QueueTaskDispatcher {
      * @since 1.427
      */
     @Override
+    @SuppressWarnings("unchecked")
     public CauseOfBlockage canRun(Queue.Item item) {
         if(item.task instanceof AbstractProject) {
             AbstractProject project = (AbstractProject) item.task;

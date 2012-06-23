@@ -30,9 +30,6 @@ import hudson.model.queue.CauseOfBlockage;
 import hudson.slaves.DumbSlave;
 import hudson.slaves.SlaveComputer;
 import hudson.tasks.Shell;
-import jenkins.model.Jenkins;
-import junit.framework.TestCase;
-import org.junit.Test;
 import org.jvnet.hudson.test.HudsonTestCase;
 
 import java.io.IOException;
@@ -49,7 +46,6 @@ public class BuildBlockerQueueTaskDispatcherTest extends HudsonTestCase {
      * One test for all for faster execution.
      * @throws Exception
      */
-    @Test
     public void testCanRun() throws Exception {
         // init slave
         LabelAtom slaveLabel = new LabelAtom("slave");

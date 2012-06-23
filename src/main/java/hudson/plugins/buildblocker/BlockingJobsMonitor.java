@@ -27,7 +27,6 @@ package hudson.plugins.buildblocker;
 import hudson.model.Computer;
 import hudson.model.Executor;
 import hudson.model.Queue;
-import hudson.model.queue.WorkUnit;
 import jenkins.model.Jenkins;
 import org.apache.commons.lang.StringUtils;
 

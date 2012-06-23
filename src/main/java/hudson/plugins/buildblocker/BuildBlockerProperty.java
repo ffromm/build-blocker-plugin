@@ -69,6 +69,7 @@ public class BuildBlockerProperty extends JobProperty<Job<?, ?>> {
      * Returns true if the build blocker is enabled.
      * @return true if the build blocker is enabled
      */
+    @SuppressWarnings("unused")
     public boolean isUseBuildBlocker() {
         return useBuildBlocker;
     }
@@ -100,6 +101,7 @@ public class BuildBlockerProperty extends JobProperty<Job<?, ?>> {
     /**
      * Descriptor
      */
+    @SuppressWarnings("unused")
     @Extension
     public static final class BuildBlockerDescriptor extends JobPropertyDescriptor {
 
