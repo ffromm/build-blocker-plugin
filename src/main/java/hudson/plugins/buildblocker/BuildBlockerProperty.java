@@ -139,7 +139,8 @@ public class BuildBlockerProperty extends JobProperty<Job<?, ?>> {
                     buildBlockerProperty.setBlockingJobs(formData.getJSONObject(USE_BUILD_BLOCKER).getString(BLOCKING_JOBS_KEY));
 
                 } catch(JSONException e) {
-                    LOG.log(Level.WARNING, "could not get blocking jobs from " + formData.getString(BLOCKING_JOBS_KEY));
+                    buildBlockerProperty.setUseBuildBlocker(false);
+                    LOG.log(Level.WARNING, "could not get blocking jobs from " + formData.toString());
                 }
             }
 
